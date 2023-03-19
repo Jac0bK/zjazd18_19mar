@@ -18,7 +18,7 @@ class TestApiDemos(unittest.TestCase):
         caps = {}
         caps["platformName"] = "Android"
         caps["appium:platformVersion"] = "9"
-        caps["appium:deviceName"] = "localhost:50078"
+        caps["appium:deviceName"] = "localhost:50640"
         caps["appium:app"] = "C:\\Users\\vdi-student\\Downloads\\ApiDemos-debug.apk"
         caps["appium:ensureWebviewsHavePages"] = True
         caps["appium:nativeWebScreenshot"] = True
