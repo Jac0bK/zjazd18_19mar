@@ -79,12 +79,14 @@ class TestApiDemos(unittest.TestCase):
         actions_dnd = ActionChains(self.driver,duration=500)
         # actions_dnd.w3c_actions = ActionBuilder(self.driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
         # actions_dnd.move_to_element(dot_1)
-        actions_dnd.drag_and_drop(dot_1, dot_2)    #szybszy sposob na przesuniecie i upuszczenie zamiast move to element itd.
-        actions_dnd.pause(5)
+        # actions_dnd.click_and_hold(dot_1)
         # actions_dnd.move_to_element(dot_2)
         # actions_dnd.release(dot_2)
+        actions_dnd.drag_and_drop(dot_1, dot_2)  # szybszy sposob na przesuniecie i upuszczenie zamiast move to element itd.
+        actions_dnd.pause(5)
         actions_dnd.perform()
 
+        self.driver.save_screenshot("C:\\Users\\vdi-student\\Downloads\\screenshot.png")
 
 if __name__ == "__main__":
     suite = unittest.TestLoader().loadTestsFromTestCase(TestApiDemos)
