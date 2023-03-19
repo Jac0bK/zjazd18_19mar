@@ -1,6 +1,7 @@
 # This sample code uses the Appium python client v2
 # pip install Appium-Python-Client
 # Then you can paste this into a file and simply run with Python
+import time
 
 from appium import webdriver
 from appium.webdriver.common.appiumby import AppiumBy
@@ -24,13 +25,15 @@ caps["appium:connectHardwareKeyboard"] = True
 
 driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
 
-el1 = driver.find_element(by=AppiumBy.ID, value="com.android.calculator2:id/digit_1")
+el1 = driver.find_element(by=AppiumBy.ID, value="com.android.calculator2:id/digit_3")
 el1.click()
 el2 = driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="plus")
 el2.click()
-el3 = driver.find_element(by=AppiumBy.ID, value="com.android.calculator2:id/digit_2")
+el3 = driver.find_element(by=AppiumBy.ID, value="com.android.calculator2:id/digit_7")
 el3.click()
 el4 = driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="equals")
 el4.click()
+
+time.sleep(3)
 
 driver.quit()
